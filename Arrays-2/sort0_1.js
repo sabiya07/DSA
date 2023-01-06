@@ -90,5 +90,104 @@ for(i=0;i<=Arr.length;i++){
     sum= sum^arr[i]
 }
 console.log(sum)
+//---------------------------------------//
 
- 
+function findFirstOccu(arr, target) {
+  let start = 0;
+  let last = arr.length - 1;
+  let ans = 0;
+
+  while (start <= last) {
+    let mid = Math.floor((last + start) / 2);
+    if (arr[mid] === target) {
+      ans = mid;
+      last = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  console.log(ans);
+}
+
+
+function findFirstOccu(arr, target) {
+    let start = 0;
+    let last = arr.length - 1;
+    let ans = 0;
+while (start <= last) {
+    let mid = Math.floor((last + start) / 2);
+    if (arr[mid] === target) {
+      ans = mid;
+      last = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  console.log(ans);
+}
+
+
+function changeBit(num, n) {
+    let a = 1 << n;
+    console.log(a);
+    let res = num | a;
+    console.log(res);
+  }
+
+
+  arr=[5,4,3,2,1,19]
+  let n=arr.length
+
+  function bubble(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i] > arr[j]) {
+          let swap = arr[i];
+          arr[i] = arr[j];
+          arr[j] = swap;
+        }
+      }
+    }
+    return arr;
+  }
+
+
+
+  function sort(arr){
+    for (let i=0;i<arr.length;i++){
+      for (let j=i+1;j<arr.length;j++){
+        if(arr[i]>arr[j]){
+          let swap=arr[i];
+          arr[i]=arr[j];
+          arr[j]=swap;
+        }
+      }
+    }
+    return([1,2,3,4,5,6])
+  }
+
+  let arr4 = [
+    3,
+    3,
+    2,
+    2,
+    2,
+    0,
+    0
+];
+
+function Sorting(arr4) {
+    for (let i = 0; i < arr4.length; i++) {
+        for (let j = i + 1; j < arr4.length; j++) {
+            if (arr4[i] >= arr4[j]) {
+                let temp = arr4[i];
+                arr4[i] = arr4[j];
+                arr4[j] = temp;
+            }
+        }
+    }
+return arr4
+}
+console.log(Sorting(arr4))
+
+  
